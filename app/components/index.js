@@ -20,7 +20,7 @@ const Routes = {
 };
 
 const AppNavigator = StackNavigator(Routes, {
-  initialRouteName: 'Chat',
+  initialRouteName: 'Home',
   headerMode: 'none',
 });
 
