@@ -7,20 +7,20 @@ import {
 import {
   StackNavigator,
 } from 'react-navigation';
-import Tabs from './Tabs'
+import Tabs from './Tabs';
+import Chat from './Chat';
+
 const Routes = {
+  Chat: {
+    screen: Chat,
+  },
   Home: {
-    screen: Tabs
+    screen: Tabs,
   }
 };
 
-const AppNavigator = StackNavigator({
-  ...Routes,
-  Home: {
-    screen: Tabs,
-  },
-}, {
-  initialRouteName: 'Home',
+const AppNavigator = StackNavigator(Routes, {
+  initialRouteName: 'Chat',
   headerMode: 'none',
 });
 

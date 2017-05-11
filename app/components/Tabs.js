@@ -7,7 +7,7 @@ import {
 import Contacts from './Contacts';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
 import { Ionicons } from '@expo/vector-icons';
-import style from './style'
+import style from './style';
 
 export default class Tabs extends React.Component {
   render() {
@@ -28,9 +28,9 @@ export default class Tabs extends React.Component {
           tabBarActiveTextColor="#fff"
           tabBarInactiveTextColor="#88b0ac"
           >
-          <Contacts tabLabel="Contacts" />
-          <Contacts tabLabel="Flow" />
-          <Contacts tabLabel="Jest" />
+          <Contacts tabLabel="Contacts" navigation={this.props.navigation}/>
+          <Contacts tabLabel="Flow"  navigation={this.props.navigation}/>
+          <Contacts tabLabel="Jest"  navigation={this.props.navigation}/>
         </ScrollableTabView>
       </View>
     );
