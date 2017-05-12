@@ -10,7 +10,7 @@ function receiveMessage(event)
 /* End of Message Listener from React WebView */
 
 /* Test messange to React */
-window.postMessage("Hello from React");
+window.postMessage("Hello from React", location.origin);
 /* End of test */
 
 window.onerror = function(msg, url, line, col, error) {
