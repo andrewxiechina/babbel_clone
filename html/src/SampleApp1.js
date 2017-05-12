@@ -5,9 +5,13 @@ window.addEventListener("message", receiveMessage, false);
 
 function receiveMessage(event)
 {
-  changeModel();
+  alert("hello");
 }
 /* End of Message Listener from React WebView */
+
+/* Test messange to React */
+window.postMessage("Hello from React");
+/* End of test */
 
 window.onerror = function(msg, url, line, col, error) {
     var errmsg = "file:" + url + "<br>line:" + line + " " + msg;

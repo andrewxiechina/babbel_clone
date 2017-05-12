@@ -12,10 +12,13 @@ var { width, height } = Dimensions.get('window');
 export default class MyWeb extends Component {
   webview = null
   postMessage = () => {
-    if (this.webview) {
       this.webview.postMessage('"Hello" from React Native!');
-    }
   }
+
+  onMessage = e => {
+    Alert.alert(e.data);
+  }
+
   render() {
     return (
       <View style={[{flex: 1}]}>
@@ -29,6 +32,7 @@ export default class MyWeb extends Component {
             javaScriptEnabled={true}
             domStorageEnabled={true}
             scalesPageToFit={true}
+            onMessage={this.onMessage}
           />
         </View>
         <View style={[{flex: 1, position: "absolute", top: 0, left: 0, backgroundColor: 'transparent', height: height}]}>
