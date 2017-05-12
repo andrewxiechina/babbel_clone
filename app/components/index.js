@@ -9,6 +9,7 @@ import {
 } from 'react-navigation';
 import Tabs from './Tabs';
 import Chat from './Chat';
+import MyWeb from './MyWeb';
 
 const Routes = {
   Chat: {
@@ -16,11 +17,14 @@ const Routes = {
   },
   Home: {
     screen: Tabs,
+  },
+  MyWeb: {
+    screen: MyWeb,
   }
 };
 
 const AppNavigator = StackNavigator(Routes, {
-  initialRouteName: 'Home',
+  initialRouteName: 'MyWeb',
   headerMode: 'none',
 });
 
