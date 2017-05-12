@@ -1,30 +1,61 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <meta name="renderer" content="webkit">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta charset="utf-8">
-        <title>Pixi-Live2D</title>
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <meta name="format-detection" content="telphone=no, email=no" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+        <meta charset="UTF-8">
+            <title>Live2D SampleApp1</title>
+        </meta>
 
+        <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=1.0, maximum-scale=4.0">
+        </meta>
 
         <style>
-            * {
-                margin: 0;
-                padding: 0;
-                border: 0;
+            html, body {
+                oveflow: hidden;
+                height: 100%;
             }
 
+            body{
+                margin:0px ;
+                padding:0px ;
+            }
+
+            #glcanvas {
+                /*
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                */
+                background-size: 150%;
+                background-position: 50% 50%;
+            }
+
+
         </style>
+
     </head>
-    <body>
-        <div id="app"></div>
-        <script type="text/javascript" src="js/pixi.min.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/live2d.min.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/Live2DFramework.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/index.js" charset="utf-8"></script>
+
+    <body onload="sampleApp1()">
+
+            <canvas id="glcanvas" width="320" height="568" >
+            </canvas>
+
+            <button id="btnChange" display="none"></button>
+
+        <!-- Live2D Library -->
+        <script src="/lib/live2d.min.js"></script>
+
+        <!-- Live2D Framework -->
+        <script src="/framework/Live2DFramework.js"></script>
+
+        <!-- User's Script -->
+        <script src="src/utils/MatrixStack.js"></script>
+        <script src="src/utils/ModelSettingJson.js"></script>
+        <script src="src/PlatformManager.js"></script>
+        <script src="src/LAppDefine.js"></script>
+        <script src="src/LAppModel.js"></script>
+        <script src="src/LAppLive2DManager.js"></script>
+        <script src="src/SampleApp1.js"></script>
+
     </body>
 </html>
