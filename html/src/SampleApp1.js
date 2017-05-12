@@ -6,12 +6,12 @@ window.onload(function() {
 
   function receiveMessage(event)
   {
-    alert("hello");
+    alert(event.data);
   }
   /* End of Message Listener from React WebView */
 
   /* Test messange to React */
-  window.postMessage("Hello from React", location.origin);
+  window.postMessage("Hello from HTTP", location.origin);
   /* End of test */
 });
 

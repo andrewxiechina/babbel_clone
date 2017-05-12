@@ -12,7 +12,6 @@ var { width, height } = Dimensions.get('window');
 export default class MyWeb extends Component {
   webview = null
   postMessage = () => {
-    Alert.alert("Post Message");
     this.webview.postMessage('"Hello" from React Native!');
   }
 
