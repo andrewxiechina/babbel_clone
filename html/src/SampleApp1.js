@@ -1,5 +1,13 @@
 var thisRef = this;
 
+/* Message Listener from React WebView */
+window.addEventListener("message", receiveMessage, false);
+
+function receiveMessage(event)
+{
+  changeModel();
+}
+/* End of Message Listener from React WebView */
 
 window.onerror = function(msg, url, line, col, error) {
     var errmsg = "file:" + url + "<br>line:" + line + " " + msg;
