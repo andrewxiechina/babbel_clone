@@ -13,9 +13,7 @@ var img2 = "https://gcsagents.com/wp-content/uploads/2015/08/The-Value-of-a-Smil
 export default class Root extends React.Component {
   render() {
     return (
-      <View style={[{paddingTop: 20, flex: 1, flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', flexWrap: 'wrap'}]}>
-        <ButtonBlock title="Continue" />
-      </View>
+      <ButtonBlock title="Continue" />
     );
   }
 }

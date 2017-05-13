@@ -17,15 +17,15 @@ export default class ImageFramed extends React.Component {
 
 var styles = StyleSheet.create({
   buttonBlock: {
-      height: 60,
       backgroundColor: "orange",
       paddingTop: 8,
       paddingBottom: 8,
-      flex: 1,
       marginLeft: 10,
       marginRight: 10,
       alignItems: 'center',
       justifyContent: 'center',
+      height: 60,
+      borderRadius: 5,
     },
   buttonBlockText: {
     fontSize: 22,
